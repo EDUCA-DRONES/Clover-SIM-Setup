@@ -1,9 +1,9 @@
 # Git Clone com SSH
 
 > [!NOTE]
-> Essa alteração não é obrigatória para resolver erros como **EOF**.
+> O Objetivo desse tipico é forçar o Git a fazer a clonagem de repositórios por **ssh**. Essa alteração não é obrigatória, porém serve para prefinir possíveis erros como **EOF** ou qualquer outro erro gerado por clonagem via **HTTP**.
 
-## Passo 1
+### Passo 1
 
 Para poder forçar o git a clonar todos os repositórios com o git use o seguinte comando:
 
@@ -13,7 +13,7 @@ git config --global url."git@github.com:".insteadOf "https://github.com/"
 
 Esse comando vai alterar suas configurações em `~/.gitconfig`
 
-## Passo 2
+### Passo 2
 
 Agora é necessário criar uma chave **SSH** Valida para o GitHub
 
@@ -65,7 +65,11 @@ Para gerar a Chave rode:
 
 1. Testar a conexão:
    Para verificar se tudo está configurado corretamente, execute:
+
    ```BASH
    ssh -T git@github.com
    ```
-   Se for a primeira vez, você poderá ver uma mensagem perguntando se deseja continuar a conexão. Digite `yes`. e deve receber uma mensagem como: `Hi Nome_De_Usuário! You've successfully authenticated, but GitHub does not provide shell access.`
+
+   Se for a primeira vez, você poderá ver uma mensagem perguntando se deseja continuar a conexão. Digite `yes`.
+
+   Se tudo corer bem, você deve receber uma mensagem como: `Hi Nome_De_Usuário! You've successfully authenticated, but GitHub does not provide shell access.`
