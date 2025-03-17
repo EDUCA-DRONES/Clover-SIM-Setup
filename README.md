@@ -257,8 +257,8 @@ Você testar voos autônomos utilizando scripts de exemplo no diretório `~/catk
 
 Chegamos ao **fim de nosso Tutorial**, caso ele te ajudou, peço que também ajude nosso projeto seguindo as **páginas do Instagram**:
 
-- <a href='https://www.instagram.com/dronesguanambi/' target='_blank'>dronesguanambi</a>
-- <a href='https://www.instagram.com/educa_drones/' target='_blank'>educa_drones</a>
+- <a href='https://www.instagram.com/dronesguanambi/' target="_blank">dronesguanambi</a>
+- <a href='https://www.instagram.com/educa_drones/' target="_blank">educa_drones</a>
 
 caso deseje ver a documentação original clique [aqui](#todas-as-instruções-a-seguir-foram-tiradas-de) para ver as referencias
 
