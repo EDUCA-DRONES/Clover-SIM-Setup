@@ -1,8 +1,10 @@
 # Git Clone com SSH
 
+> [!NOTE]
+> Essa alteração não é obrigatória para resolver erros como **EOF**.
+
 ## Passo 1
 
-Essa alteração não é obrigatória para resolver erros como **EOF**.
 Para poder forçar o git a clonar todos os repositórios com o git use o seguinte comando:
 
 ```BASH
@@ -55,7 +57,7 @@ Para gerar a Chave rode:
 
    - No menu à esquerda, clique em SSH and GPG keys.
 
-   ![SSH](images/config_menu.png)
+   ![SSH](images/Ssh.png)
 
    - Clique no botão New SSH key ou Add SSH key.
    - Dê um título (por exemplo, "Minha chave Linux") e cole a chave pública no campo indicado.
