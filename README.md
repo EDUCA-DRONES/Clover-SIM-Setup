@@ -82,6 +82,18 @@ Rode o comando para instalação do ROS:
 sudo apt install ros-noetic-desktop-full
 ```
 
+- Dependências extras do MAVROS: O `GeographicLib` precisa para converter altitudes e coordenadas.
+
+```bash
+sudo apt install ros-noetic-mavros ros-noetic-mavros-extras
+```
+
+- Pacote que permite a comunicação entre o ROS e interfaces externas (como o navegador ou scripts que usam JSON) não está instalado no seu sistema.
+
+```bash
+sudo apt install ros-noetic-rosbridge-server
+```
+
 mais informações em [wiki.ros.org](https://wiki.ros.org/noetic/Installation/Ubuntu)
 
 <br>
@@ -178,6 +190,7 @@ rosdep install --from-paths src --ignore-src -y
 3. Instale as dependências do Python:
 
 ```bash
+sudo apt install pip
 sudo /usr/bin/python3 -m pip install -r ~/catkin_ws/src/clover/clover/requirements.txt
 ```
 
@@ -236,6 +249,13 @@ O pacote mavos requer que os conjuntos de dados da geographiclib estejam present
 
 # Compilar o Simulador:
 
+Instalar bibliotecas Jinja2 (usado no ROS e no Gazebo para gerar arquivos de configuração dinamicamente) e packaging:
+
+```bash
+sudo apt install python3-jinja2
+pip3 install --user packaging
+```
+
 Compilar a sua área de trabalho:
 
 ```bash
@@ -251,16 +271,77 @@ Para ter a certeza de que tudo foi compilado corretamente, tente executar o simu
 roslaunch clover_simulation simulator.launch
 ```
 
-Você testar voos autônomos utilizando scripts de exemplo no diretório `~/catkin_ws/src/clover/clover/examples.`
+Teste voos autônomos utilizando scripts de exemplo no diretório `~/catkin_ws/src/clover/clover/examples.`
 
 ---
 
-Chegamos ao **fim de nosso Tutorial**, caso ele te ajudou, peço que também ajude nosso projeto seguindo as **páginas do Instagram**:
+# Criar o atalho
+
+**Atalho opcional para executar o programa sem precisar executar o comando acima**
+
+Crie o script:
+
+```bash
+mkdir ~/.local/share/scripts
+nano ~/.local/share/clover_simulation.sh
+```
+
+Cole dentro de `clover_simulation.sh`:
+
+```bash
+#!/bin/bash
+roslaunch clover_simulation simulator.launch
+```
+
+Torne o script executável:
+
+```bash
+chmod +x ~/.local/share/scripts/clover_simulation.sh
+```
+
+Crie o arquivo `clover_simulation.desktop`:
+
+```bash
+nano ~/.local/share/applications/clover_simulation.desktop
+```
+
+Cole dentro dele:
+
+- Lembre-se de trocar `SEU_USUARIO` pelo usuário correto.
+
+```bash
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Clover Simulation
+Comment=Roda o script de simulação do Clover
+Exec=/home/SEU_USUARIO/.local/share/scripts/clover_simulation.sh
+Icon=gazebo
+Terminal=true
+```
+
+Configurar icone (dispensável):
+
+- Baixe o ícone desejado dentro de `~/Downloads` e renomeie como `gazebo.png`
+
+- Depois de baixado e renomeado execute:
+
+```bash
+mkdir ~/.local/share/icons
+mv ~/Downloads/gazebo.png ~/.local/share/icons
+chmod +x ~/.local/share/icons/gazebo.png
+```
+
+Pronto! Agora você tem um aplicativo chamado `Clover Simulation` que executa a simulação em apenas um clique. Fixe-o a sua barra de favoritos.
+
+---
+
+Chegamos ao **fim de nosso tutorial**, caso ele te ajudou, peço que também ajude nosso projeto seguindo as **páginas do Instagram**:
 
 - <a href='https://www.instagram.com/dronesguanambi/' target="_blank">dronesguanambi</a>
 - <a href='https://www.instagram.com/educa_drones/' target="_blank">educa_drones</a>
 
-caso deseje ver a documentação original clique [aqui](#todas-as-instruções-a-seguir-foram-tiradas-de) para ver as referencias
+Caso deseje ver a documentação original clique [aqui](#todas-as-instruções-a-seguir-foram-tiradas-de) para ver as referencias
 
 Feito por: [@msantos7gabriel](https://github.com/msantos7gabriel) <br>
 Editado a última vez por: [@msantos7gabriel](https://github.com/msantos7gabriel) 17/03/2025
