@@ -88,7 +88,7 @@ sudo apt install ros-noetic-desktop-full
 sudo apt install ros-noetic-mavros ros-noetic-mavros-extras
 ```
 
-- Pacote que permite a comunicação entre o ROS e interfaces externas (como o navegador ou scripts que usam JSON) não está instalado no seu sistema.
+- Pacote que permite a comunicação entre o ROS e interfaces externas como o navegador ou scripts que usam JSON.
 
 ```bash
 sudo apt install ros-noetic-rosbridge-server
