@@ -343,5 +343,5 @@ Chegamos ao **fim de nosso tutorial**, caso ele te ajudou, peço que também aju
 
 Caso deseje ver a documentação original clique [aqui](#todas-as-instruções-a-seguir-foram-tiradas-de) para ver as referencias
 
-Feito por: [@msantos7gabriel](https://github.com/msantos7gabriel) <br>
+Feito por: [@msantos7gabriel](https://github.com/msantos7gabriel) [@R-Nhan](https://github.com/R-Nhan) <br>
 Editado a última vez por: [@msantos7gabriel](https://github.com/msantos7gabriel) 17/03/2025
