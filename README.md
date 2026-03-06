@@ -283,7 +283,7 @@ Crie o script:
 
 ```bash
 mkdir ~/.local/share/scripts
-nano ~/.local/share/clover_simulation.sh
+nano ~/.local/share/scripts/clover_simulation.sh
 ```
 
 Cole dentro de `clover_simulation.sh`:
